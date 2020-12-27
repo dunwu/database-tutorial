@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Elasticsearch API | DB-TUTORIAL</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/db-tutorial/favicon.ico">
+    <meta name="description" content="数据库教程">
+    
+    <link rel="preload" href="/db-tutorial/assets/css/0.styles.23083d05.css" as="style"><link rel="preload" href="/db-tutorial/assets/js/app.79266cfb.js" as="script"><link rel="preload" href="/db-tutorial/assets/js/4.26b0a8d7.js" as="script"><link rel="preload" href="/db-tutorial/assets/js/24.fe279a90.js" as="script"><link rel="preload" href="/db-tutorial/assets/js/5.1e6b02f3.js" as="script"><link rel="prefetch" href="/db-tutorial/assets/js/10.e898170f.js"><link rel="prefetch" href="/db-tutorial/assets/js/11.632c95d5.js"><link rel="prefetch" href="/db-tutorial/assets/js/12.460e4723.js"><link rel="prefetch" href="/db-tutorial/assets/js/13.02572243.js"><link rel="prefetch" href="/db-tutorial/assets/js/14.c6190d41.js"><link rel="prefetch" href="/db-tutorial/assets/js/15.a381db4a.js"><link rel="prefetch" href="/db-tutorial/assets/js/16.88f06b5b.js"><link rel="prefetch" href="/db-tutorial/assets/js/17.8baa2e66.js"><link rel="prefetch" href="/db-tutorial/assets/js/18.ee71ad12.js"><link rel="prefetch" href="/db-tutorial/assets/js/19.2462d2be.js"><link rel="prefetch" href="/db-tutorial/assets/js/20.a06d0360.js"><link rel="prefetch" href="/db-tutorial/assets/js/21.3ac751e1.js"><link rel="prefetch" href="/db-tutorial/assets/js/22.1f1b2c8a.js"><link rel="prefetch" href="/db-tutorial/assets/js/23.2cf83d37.js"><link rel="prefetch" href="/db-tutorial/assets/js/25.a5d7cfb6.js"><link rel="prefetch" href="/db-tutorial/assets/js/26.25a48ed2.js"><link rel="prefetch" href="/db-tutorial/assets/js/27.c589035a.js"><link rel="prefetch" href="/db-tutorial/assets/js/28.7a2cd641.js"><link rel="prefetch" href="/db-tutorial/assets/js/29.6f930670.js"><link rel="prefetch" href="/db-tutorial/assets/js/30.23b2927a.js"><link rel="prefetch" href="/db-tutorial/assets/js/31.31a1f172.js"><link rel="prefetch" href="/db-tutorial/assets/js/32.2986bb34.js"><link rel="prefetch" href="/db-tutorial/assets/js/33.a9922464.js"><link rel="prefetch" href="/db-tutorial/assets/js/34.4b026973.js"><link rel="prefetch" href="/db-tutorial/assets/js/35.9dd2d462.js"><link rel="prefetch" href="/db-tutorial/assets/js/36.3e51ad0b.js"><link rel="prefetch" href="/db-tutorial/assets/js/37.0c75b4a6.js"><link rel="prefetch" href="/db-tutorial/assets/js/38.53aff2bf.js"><link rel="prefetch" href="/db-tutorial/assets/js/39.b34704c6.js"><link rel="prefetch" href="/db-tutorial/assets/js/40.d2692de9.js"><link rel="prefetch" href="/db-tutorial/assets/js/41.48788a1b.js"><link rel="prefetch" href="/db-tutorial/assets/js/42.4ed55a89.js"><link rel="prefetch" href="/db-tutorial/assets/js/43.bd1a75df.js"><link rel="prefetch" href="/db-tutorial/assets/js/44.331ac972.js"><link rel="prefetch" href="/db-tutorial/assets/js/45.74ff24a0.js"><link rel="prefetch" href="/db-tutorial/assets/js/46.d0d0837c.js"><link rel="prefetch" href="/db-tutorial/assets/js/47.d6b3ff5d.js"><link rel="prefetch" href="/db-tutorial/assets/js/48.08329437.js"><link rel="prefetch" href="/db-tutorial/assets/js/49.8ec348c2.js"><link rel="prefetch" href="/db-tutorial/assets/js/50.fff0c0fc.js"><link rel="prefetch" href="/db-tutorial/assets/js/51.a3a2bf3f.js"><link rel="prefetch" href="/db-tutorial/assets/js/52.1f69c2ef.js"><link rel="prefetch" href="/db-tutorial/assets/js/53.04bf3805.js"><link rel="prefetch" href="/db-tutorial/assets/js/54.c6869df0.js"><link rel="prefetch" href="/db-tutorial/assets/js/55.ad3df06e.js"><link rel="prefetch" href="/db-tutorial/assets/js/56.a8504152.js"><link rel="prefetch" href="/db-tutorial/assets/js/57.14be86b1.js"><link rel="prefetch" href="/db-tutorial/assets/js/58.66724307.js"><link rel="prefetch" href="/db-tutorial/assets/js/59.450b982a.js"><link rel="prefetch" href="/db-tutorial/assets/js/6.50ecdddf.js"><link rel="prefetch" href="/db-tutorial/assets/js/60.4dfd7c6f.js"><link rel="prefetch" href="/db-tutorial/assets/js/61.75308f0a.js"><link rel="prefetch" href="/db-tutorial/assets/js/62.345c0394.js"><link rel="prefetch" href="/db-tutorial/assets/js/63.0070d071.js"><link rel="prefetch" href="/db-tutorial/assets/js/64.3aa1dc66.js"><link rel="prefetch" href="/db-tutorial/assets/js/65.ad503350.js"><link rel="prefetch" href="/db-tutorial/assets/js/66.df8cf248.js"><link rel="prefetch" href="/db-tutorial/assets/js/67.d286b25d.js"><link rel="prefetch" href="/db-tutorial/assets/js/68.f9f672df.js"><link rel="prefetch" href="/db-tutorial/assets/js/69.cdabedef.js"><link rel="prefetch" href="/db-tutorial/assets/js/7.d4495af0.js"><link rel="prefetch" href="/db-tutorial/assets/js/8.96971897.js"><link rel="prefetch" href="/db-tutorial/assets/js/9.2ef68944.js"><link rel="prefetch" href="/db-tutorial/assets/js/vendors~flowchart.36848b96.js"><link rel="prefetch" href="/db-tutorial/assets/js/vendors~notification.5e49bf43.js">
+    <link rel="stylesheet" href="/db-tutorial/assets/css/0.styles.23083d05.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/db-tutorial/" class="home-link router-link-active"><img src="images/dunwu-logo-100.png" alt="DB-TUTORIAL" class="logo"> <span class="site-name can-hide">DB-TUTORIAL</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/db-tutorial/sql/" class="nav-link">
+  SQL
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/" class="nav-link router-link-active">
+  NOSQL
+</a></div><div class="nav-item"><a href="/db-tutorial/sql/mysql/" class="nav-link">
+  Mysql
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/mongodb/" class="nav-link">
+  MongoDB
+</a></div><div class="nav-item"><a href="https://github.com/dunwu/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🎯 博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/dunwu/db-tutorial" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/db-tutorial/sql/" class="nav-link">
+  SQL
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/" class="nav-link router-link-active">
+  NOSQL
+</a></div><div class="nav-item"><a href="/db-tutorial/sql/mysql/" class="nav-link">
+  Mysql
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/db-tutorial/nosql/mongodb/" class="nav-link">
+  MongoDB
+</a></div><div class="nav-item"><a href="https://github.com/dunwu/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🎯 博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/dunwu/db-tutorial" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Elasticsearch API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/db-tutorial/nosql/elasticsearch/elasticsearch-api.html#一、rest-api" class="sidebar-link">一、REST API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/db-tutorial/nosql/elasticsearch/elasticsearch-api.html#索引" class="sidebar-link">索引</a></li><li class="sidebar-sub-header"><a href="/db-tutorial/nosql/elasticsearch/elasticsearch-api.html#文档" class="sidebar-link">文档</a></li></ul></li><li><a href="/db-tutorial/nosql/elasticsearch/elasticsearch-api.html#二、java-api" class="sidebar-link">二、Java API</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/db-tutorial/nosql/elasticsearch/elasticsearch-api.html#参考资料" class="sidebar-link">参考资料</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="elasticsearch-api"><a href="#elasticsearch-api" class="header-anchor">#</a> Elasticsearch API</h1> <blockquote><p><strong><a href="https://github.com/elastic/elasticsearch" target="_blank" rel="noopener noreferrer">Elasticsearch<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个分布式、RESTful 风格的搜索和数据分析引擎</strong>，能够解决不断涌现出的各种用例。 作为 Elastic Stack 的核心，它集中存储您的数据，帮助您发现意料之中以及意料之外的情况。</p> <p><a href="https://github.com/elastic/elasticsearch" target="_blank" rel="noopener noreferrer">Elasticsearch<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 基于搜索库 <a href="https://github.com/apache/lucene-solr" target="_blank" rel="noopener noreferrer">Lucene<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 开发。ElasticSearch 隐藏了 Lucene 的复杂性，提供了简单易用的 REST API / Java API 接口（另外还有其他语言的 API 接口）。</p> <p><em>以下简称 ES</em>。</p></blockquote> <h2 id="一、rest-api"><a href="#一、rest-api" class="header-anchor">#</a> 一、REST API</h2> <blockquote><p>REST API 最详尽的文档应该参考：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html" target="_blank" rel="noopener noreferrer">ES 官方 REST API<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h3 id="索引"><a href="#索引" class="header-anchor">#</a> 索引</h3> <p>新建 Index，可以直接向 ES 服务器发出 <code>PUT</code> 请求。</p> <h4 id="创建索引"><a href="#创建索引" class="header-anchor">#</a> 创建索引</h4> <p>示例：直接创建索引</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -X POST <span class="token string">'localhost:9200/user'</span>
+</code></pre></div><p>服务器返回一个 JSON 对象，里面的 <code>acknowledged</code> 字段表示操作成功。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span><span class="token string">&quot;acknowledged&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">&quot;shards_acknowledged&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">&quot;index&quot;</span><span class="token operator">:</span><span class="token string">&quot;user&quot;</span><span class="token punctuation">}</span>
+</code></pre></div><p>示例：创建索引时指定配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -X PUT -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user'</span>  -d <span class="token string">'
+{
+    &quot;settings&quot; : {
+        &quot;index&quot; : {
+            &quot;number_of_shards&quot; : 3,
+            &quot;number_of_replicas&quot; : 2
+        }
+    }
+}'</span>
+</code></pre></div><p>示例：创建索引时指定 <code>mappings</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -X PUT -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user'</span>  -d <span class="token string">'
+{
+    &quot;settings&quot; : {
+        &quot;index&quot; : {
+            &quot;number_of_shards&quot; : 3,
+            &quot;number_of_replicas&quot; : 2
+        }
+    }
+}'</span>
+</code></pre></div><h4 id="删除索引"><a href="#删除索引" class="header-anchor">#</a> 删除索引</h4> <p>然后，我们可以通过发送 <code>DELETE</code> 请求，删除这个 Index。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -X DELETE <span class="token string">'localhost:9200/user'</span>
+</code></pre></div><h4 id="查看索引"><a href="#查看索引" class="header-anchor">#</a> 查看索引</h4> <p>可以通过 GET 请求查看索引信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看索引相关信息</span>
+<span class="token function">curl</span> -X GET <span class="token string">'localhost:9200/user'</span>
+
+<span class="token comment">#查看索引的文档总数</span>
+CURL -X <span class="token string">'localhost:9200/user/_count'</span>
+
+<span class="token comment">#查看前10条文档，了解文档格式</span>
+POST user/_search
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">#_cat indices API</span>
+<span class="token comment">#查看indices</span>
+CURL -X /_cat/indices/kibana*?v<span class="token operator">&amp;</span><span class="token assign-left variable">s</span><span class="token operator">=</span>index
+
+<span class="token comment">#查看状态为绿的索引</span>
+CURL -X /_cat/indices?v<span class="token operator">&amp;</span><span class="token assign-left variable">health</span><span class="token operator">=</span>green
+
+<span class="token comment">#按照文档个数排序</span>
+CURL -X /_cat/indices?v<span class="token operator">&amp;</span><span class="token assign-left variable">s</span><span class="token operator">=</span>docs.count:desc
+
+<span class="token comment">#查看具体的字段</span>
+CURL -X /_cat/indices/kibana*?pri<span class="token operator">&amp;</span><span class="token function">v</span><span class="token operator">&amp;</span><span class="token assign-left variable">h</span><span class="token operator">=</span>health,index,pri,rep,docs.count,mt
+
+<span class="token comment">#How much memory is used per index?</span>
+CURL -X /_cat/indices?v<span class="token operator">&amp;</span><span class="token assign-left variable">h</span><span class="token operator">=</span>i,tm<span class="token operator">&amp;</span><span class="token assign-left variable">s</span><span class="token operator">=</span>tm:desc
+</code></pre></div><h4 id="打开-关闭索引"><a href="#打开-关闭索引" class="header-anchor">#</a> 打开/关闭索引</h4> <p>通过在 <code>POST</code> 中添加 <code>_close</code> 或 <code>_open</code> 可以打开、关闭索引。
+关闭索引</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -X POST <span class="token string">'localhost:9200/user/_close'</span>
+</code></pre></div><p>打开索引</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -X POST <span class="token string">'localhost:9200/user/_open'</span>
+</code></pre></div><h3 id="文档"><a href="#文档" class="header-anchor">#</a> 文档</h3> <h4 id="新增记录"><a href="#新增记录" class="header-anchor">#</a> 新增记录</h4> <p>向指定的 <code>/Index/type</code> 发送 PUT 请求，就可以在 Index 里面新增一条记录。比如，向 <code>/user/admin</code> 发送请求，就可以新增一条人员记录。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -X PUT -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user/admin/1'</span> -d <span class="token string">'
+{
+&quot;user&quot;: &quot;张三&quot;,
+&quot;title&quot;: &quot;工程师&quot;,
+&quot;desc&quot;: &quot;数据库管理&quot;
+}'</span>
+</code></pre></div><p>服务器返回的 JSON 对象，会给出 Index、Type、Id、Version 等信息。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;created&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果你仔细看，会发现请求路径是<code>/user/admin/1</code>，最后的<code>1</code>是该条记录的 Id。它不一定是数字，任意字符串（比如<code>abc</code>）都可以。</p> <p>新增记录的时候，也可以不指定 Id，这时要改成 POST 请求。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -X POST -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user/admin'</span> -d <span class="token string">'
+{
+&quot;user&quot;: &quot;李四&quot;,
+&quot;title&quot;: &quot;工程师&quot;,
+&quot;desc&quot;: &quot;系统管理&quot;
+}'</span>
+</code></pre></div><p>上面代码中，向<code>/user/admin</code>发出一个 POST 请求，添加一个记录。这时，服务器返回的 JSON 对象里面，<code>_id</code>字段就是一个随机字符串。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;WWuoDG8BHwECs7SiYn93&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token string">&quot;created&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_seq_no&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_primary_term&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意，如果没有先创建 Index（这个例子是<code>accounts</code>），直接执行上面的命令，Elastic 也不会报错，而是直接生成指定的 Index。所以，打字的时候要小心，不要写错 Index 的名称。</p> <h4 id="删除记录"><a href="#删除记录" class="header-anchor">#</a> 删除记录</h4> <p>删除记录就是发出 <code>DELETE</code> 请求。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -X DELETE <span class="token string">'localhost:9200/user/admin/2'</span>
+</code></pre></div><h4 id="更新记录"><a href="#更新记录" class="header-anchor">#</a> 更新记录</h4> <p>更新记录就是使用 <code>PUT</code> 请求，重新发送一次数据。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -X PUT -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user/admin/1'</span> -d <span class="token string">'
+{
+&quot;user&quot;: &quot;张三&quot;,
+&quot;title&quot;: &quot;工程师&quot;,
+&quot;desc&quot;: &quot;超级管理员&quot;
+}'</span>
+</code></pre></div><h4 id="查询记录"><a href="#查询记录" class="header-anchor">#</a> 查询记录</h4> <p>向<code>/Index/Type/Id</code>发出 GET 请求，就可以查看这条记录。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> <span class="token string">'localhost:9200/user/admin/1?pretty'</span>
+</code></pre></div><p>上面代码请求查看 <code>/user/admin/1</code> 这条记录，URL 的参数 <code>pretty=true</code> 表示以易读的格式返回。</p> <p>返回的数据中，<code>found</code> 字段表示查询成功，<code>_source</code>字段返回原始记录。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;_index&quot;</span><span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;found&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;工程师&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;超级管理员&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果 Id 不正确，就查不到数据，<code>found</code> 字段就是 <code>false</code></p> <h4 id="查询所有记录"><a href="#查询所有记录" class="header-anchor">#</a> 查询所有记录</h4> <p>使用 <code>GET</code> 方法，直接请求 <code>/index/type/_search</code>，就会返回所有记录。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token string">'localhost:9200/user/admin/_search?pretty'</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;took&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">1</span>,
+  <span class="token string">&quot;timed_out&quot;</span> <span class="token builtin class-name">:</span> false,
+  <span class="token string">&quot;_shards&quot;</span> <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;total&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">3</span>,
+    <span class="token string">&quot;successful&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">3</span>,
+    <span class="token string">&quot;skipped&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">0</span>,
+    <span class="token string">&quot;failed&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;hits&quot;</span> <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;total&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">2</span>,
+    <span class="token string">&quot;max_score&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">1.0</span>,
+    <span class="token string">&quot;hits&quot;</span> <span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;_index&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;user&quot;</span>,
+        <span class="token string">&quot;_type&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;admin&quot;</span>,
+        <span class="token string">&quot;_id&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;WWuoDG8BHwECs7SiYn93&quot;</span>,
+        <span class="token string">&quot;_score&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">1.0</span>,
+        <span class="token string">&quot;_source&quot;</span> <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;user&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;李四&quot;</span>,
+          <span class="token string">&quot;title&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;工程师&quot;</span>,
+          <span class="token string">&quot;desc&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;系统管理&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>,
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;_index&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;user&quot;</span>,
+        <span class="token string">&quot;_type&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;admin&quot;</span>,
+        <span class="token string">&quot;_id&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;1&quot;</span>,
+        <span class="token string">&quot;_score&quot;</span> <span class="token builtin class-name">:</span> <span class="token number">1.0</span>,
+        <span class="token string">&quot;_source&quot;</span> <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;user&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;张三&quot;</span>,
+          <span class="token string">&quot;title&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;工程师&quot;</span>,
+          <span class="token string">&quot;desc&quot;</span> <span class="token builtin class-name">:</span> <span class="token string">&quot;超级管理员&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面代码中，返回结果的 <code>took</code>字段表示该操作的耗时（单位为毫秒），<code>timed_out</code>字段表示是否超时，<code>hits</code>字段表示命中的记录，里面子字段的含义如下。</p> <ul><li><code>total</code>：返回记录数，本例是 2 条。</li> <li><code>max_score</code>：最高的匹配程度，本例是<code>1.0</code>。</li> <li><code>hits</code>：返回的记录组成的数组。</li></ul> <p>返回的记录中，每条记录都有一个<code>_score</code>字段，表示匹配的程序，默认是按照这个字段降序排列。</p> <h4 id="全文搜索"><a href="#全文搜索" class="header-anchor">#</a> 全文搜索</h4> <p>ES 的查询非常特别，使用自己的<a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.5/query-dsl.html" target="_blank" rel="noopener noreferrer">查询语法<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，要求 GET 请求带有数据体。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user/admin/_search?pretty'</span>  -d <span class="token string">'
+{
+&quot;query&quot; : { &quot;match&quot; : { &quot;desc&quot; : &quot;管理&quot; }}
+}'</span>
+</code></pre></div><p>上面代码使用 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.5/query-dsl-match-query.html" target="_blank" rel="noopener noreferrer">Match 查询<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，指定的匹配条件是<code>desc</code>字段里面包含&quot;软件&quot;这个词。返回结果如下。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;took&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;timed_out&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;_shards&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;total&quot;</span> <span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;successful&quot;</span> <span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;skipped&quot;</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;failed&quot;</span> <span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;hits&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;total&quot;</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;max_score&quot;</span> <span class="token operator">:</span> <span class="token number">0.38200712</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;hits&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;_index&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;WWuoDG8BHwECs7SiYn93&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_score&quot;</span> <span class="token operator">:</span> <span class="token number">0.38200712</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_source&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;user&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;title&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;工程师&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;desc&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;系统管理&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;_index&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_id&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_score&quot;</span> <span class="token operator">:</span> <span class="token number">0.3487891</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;_source&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;user&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;title&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;工程师&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;desc&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;超级管理员&quot;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Elastic 默认一次返回 10 条结果，可以通过<code>size</code>字段改变这个设置，还可以通过<code>from</code>字段，指定位移。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token string">'localhost:9200/user/admin/_search'</span>  -d <span class="token string">'
+{
+  &quot;query&quot; : { &quot;match&quot; : { &quot;desc&quot; : &quot;管理&quot; }},
+  &quot;from&quot;: 1,
+  &quot;size&quot;: 1
+}'</span>
+</code></pre></div><p>上面代码指定，从位置 1 开始（默认是从位置 0 开始），只返回一条结果。</p> <h4 id="逻辑运算"><a href="#逻辑运算" class="header-anchor">#</a> 逻辑运算</h4> <p>如果有多个搜索关键字， Elastic 认为它们是<code>or</code>关系。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token string">'localhost:9200/user/admin/_search'</span>  -d <span class="token string">'
+{
+&quot;query&quot; : { &quot;match&quot; : { &quot;desc&quot; : &quot;软件 系统&quot; }}
+}'</span>
+</code></pre></div><p>上面代码搜索的是<code>软件 or 系统</code>。</p> <p>如果要执行多个关键词的<code>and</code>搜索，必须使用<a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.5/query-dsl-bool-query.html" target="_blank" rel="noopener noreferrer">布尔查询<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">curl</span> -H <span class="token string">'Content-Type: application/json'</span> <span class="token string">'localhost:9200/user/admin/_search?pretty'</span>  -d <span class="token string">'
+{
+ &quot;query&quot;: {
+  &quot;bool&quot;: {
+   &quot;must&quot;: [
+    { &quot;match&quot;: { &quot;desc&quot;: &quot;管理&quot; } },
+    { &quot;match&quot;: { &quot;desc&quot;: &quot;超级&quot; } }
+   ]
+  }
+ }
+}'</span>
+</code></pre></div><h2 id="二、java-api"><a href="#二、java-api" class="header-anchor">#</a> 二、Java API</h2> <p>TODO：待补充...</p> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <ul><li><strong>官方</strong> <ul><li><a href="https://www.elastic.co/cn/products/elasticsearch" target="_blank" rel="noopener noreferrer">Elasticsearch 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/elastic/elasticsearch" target="_blank" rel="noopener noreferrer">Elasticsearch Github<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html" target="_blank" rel="noopener noreferrer">Elasticsearch 官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/dunwu/db-tutorial/edit/master/docs/nosql/elasticsearch/elasticsearch-api.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/db-tutorial/assets/js/app.79266cfb.js" defer></script><script src="/db-tutorial/assets/js/4.26b0a8d7.js" defer></script><script src="/db-tutorial/assets/js/24.fe279a90.js" defer></script><script src="/db-tutorial/assets/js/5.1e6b02f3.js" defer></script>
+  </body>
+</html>
